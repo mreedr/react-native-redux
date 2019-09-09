@@ -1,0 +1,8 @@
+{
+  "presets": ["babel-preset-expo", "node6"],
+  "env": {
+    "development": {
+      "plugins": ["transform-react-jsx-source", "transform-async-to-generator"]
+    }
+  }
+}

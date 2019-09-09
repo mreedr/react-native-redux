@@ -1,0 +1,55 @@
+{
+  "name": "rna",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "axios-mock-adapter": "^1.14.1",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-preset-node6": "^11.0.0",
+    "eslint": "^4.19.0",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-react-native": "^3.2.1",
+    "jest-expo": "25.0.0",
+    "react-native-scripts": "1.11.1",
+    "react-test-renderer": "16.2.0",
+    "redux-logger": "^3.0.6",
+    "redux-mock-store": "^1.5.1",
+    "remote-redux-devtools": "^0.5.12",
+    "remotedev-rn-debugger": "^0.8.3"
+  },
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "start": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "node node_modules/jest/bin/jest.js",
+    "postinstall": "remotedev-debugger — hostname localhost — port 5678 — injectserver",
+    "add-page": "babel-node ./bin/add-page"
+  },
+  "remotedev": {
+    "hostname": "localhost",
+    "port": 5678
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "verbose": true,
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-navigation)"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "expo": "^25.0.0",
+    "mkdirp": "^0.5.1",
+    "react": "16.2.0",
+    "react-native": "0.52.0",
+    "react-navigation": "1.5.7",
+    "react-navigation-redux-helpers": "^1.0.3",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "redux-promise": "^0.5.3",
+    "redux-thunk": "^2.2.0"
+  }
+}
